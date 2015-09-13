@@ -18,7 +18,7 @@ function main() {
     scrap.start(process.argv[2], process.argv[3], login, function(err) {
 
         if(err) throw err;
-        console.log("Finished.")
+        console.log("Finished.");
     });
 }
 
