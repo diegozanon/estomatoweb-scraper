@@ -39,8 +39,8 @@ describe('scrap', function() {
 
             var login = { connect: function(ignore, callback) { callback(null, ignore); } };
             var pageNavigator = { nav: function(ignore, callback) { callback(null, ignore, ignore); } };
-            var targetData = { extract: function(ignore, ignore2, callback) { callback(null); } };
-            var writer = { write: function(callback) { callback(null); } };
+            var targetData = { extract: function(ignore, ignore2, callback) { callback(null, ignore); } };
+            var writer = { write: function(ignore, callback) { callback(null); } };
 
             var scrapModules = {
                 login: login,
