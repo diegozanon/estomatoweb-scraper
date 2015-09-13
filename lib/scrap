@@ -7,10 +7,10 @@ exports.start = function(loginData, scrapModules, mainCallback) {
 
         async.waterfall([
             function(callback){
-                scrapModules.login.connect(callback);
+                scrapModules.login.connect(loginData, callback);
             },
-            function(callback){
-                scrapModules.pageNavigator.nav(callback);
+            function(request, callback){
+                scrapModules.pageNavigator.nav(request, callback);
             },
             function(callback){
                 scrapModules.targetData.extract(callback);
@@ -23,6 +23,6 @@ exports.start = function(loginData, scrapModules, mainCallback) {
         });
     }
     else {
-        throw constants.MSGS_INVALID_LOGINDATA;
+        throw constants.MSG_ERROR_LOGINDATA;
     }
 };

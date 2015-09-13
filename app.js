@@ -18,7 +18,7 @@ function main() {
 
     if(nbOfArgs != 4) { // Usage: node app.js email password
 
-        throw constants.MSGS_INVALID_ARGS;
+        throw constants.MSG_ERROR_ARGS;
     }
 
     var loginData = {
@@ -27,9 +27,8 @@ function main() {
     };
 
     scrap.start(loginData, scrapModules, function(err) {
-
         if(err) throw err;
-        console.log("Finished.");
+        console.log("Finished with success.");
     });
 }
 

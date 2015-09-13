@@ -9,7 +9,7 @@ describe('scrap', function() {
 
         it('should validate loginData', function() {
 
-            var errorMsg = constants.MSGS_INVALID_LOGINDATA;
+            var errorMsg = constants.MSG_ERROR_LOGINDATA;
 
             var loginDataTests = [
                 {},
@@ -36,8 +36,8 @@ describe('scrap', function() {
                 password: 'password'
             };
 
-            var login = { connect: function(callback) { callback(null); } };
-            var pageNavigator = { nav: function(callback) { callback(null); } };
+            var login = { connect: function(ignore, callback) { callback(null, ignore); } };
+            var pageNavigator = { nav: function(ignore, callback) { callback(null); } };
             var targetData = { extract: function(callback) { callback(null); } };
             var writer = { write: function(callback) { callback(null); } };
 
