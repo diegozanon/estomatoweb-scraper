@@ -1,7 +1,8 @@
-var scrap = require('../lib/scrap');
-var constants = require('../lib/constants');
 var expect = require('chai').expect;
 var sinon = require('sinon');
+var scrap = require('../lib/scrap');
+var constants = require('../lib/constants');
+var utils = require('../lib/utils');
 
 describe('scrap', function() {
 
@@ -64,6 +65,47 @@ describe('scrap', function() {
 
                 expect(calledEveryoneOnce).equal(true);
                 done();
+            });
+        });
+    });
+});
+
+describe('utils', function() {
+
+    describe('#isPositiveInt()', function() {
+
+        it('should check if is positive int', function() {
+
+            var testsTrue = [1, 15, '32'];
+
+            testsTrue.forEach(function(test){
+                expect(utils.isPositiveInt(test)).equal(true);
+            });
+
+            var testsFalse = [0, -1, '0', '-7', 3.14, undefined, '', 'test1'];
+
+            testsFalse.forEach(function(test){
+                expect(utils.isPositiveInt(test)).equal(false);
+            });
+        });
+    });
+
+    describe('#getNbOfPages()', function() {
+
+        it('should return the number of pages', function() {
+
+            // Currently, the website uses SITE_PATIENTS_PERPAGE = 15
+            var tests = [
+                { value:  0, pages: 0},
+                { value:  1, pages: 1},
+                { value: 14, pages: 1},
+                { value: 15, pages: 1},
+                { value: 16, pages: 2},
+                { value: 47, pages: 4}
+            ];
+
+            tests.forEach(function(test){
+                expect(utils.getNbOfPages(test.value)).equal(test.pages);
             });
         });
     });
