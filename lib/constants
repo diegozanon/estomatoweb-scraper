@@ -1,8 +1,15 @@
 function define(name, value) {
     Object.defineProperty(exports, name, {
-        value:      value,
-        enumerable: true
+        value: value,
+        enumerable: true,
+        writable: false
     });
 }
 
-define('MSGS_INVALID_ARGS', 'Error: you must provide two valid command line arguments. \nUsage: node app.js email password');
+define(
+    'MSGS_INVALID_ARGS',
+    'Error: you must provide two valid command line arguments. \nUsage: node app.js email password');
+
+define(
+    'MSGS_INVALID_LOGINDATA',
+    'Error: loginData must have not empty email and password fields.');

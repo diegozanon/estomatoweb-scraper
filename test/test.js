@@ -7,30 +7,41 @@ describe('scrap', function() {
 
     describe('#start()', function() {
 
-        it('should require two valid arguments', function() {
+        it('should validate loginData', function() {
 
-            var errorMsg = constants.MSGS_INVALID_ARGS;
+            var errorMsg = constants.MSGS_INVALID_LOGINDATA;
 
-            var arg1;
-            var arg2 = '';
-            var login = function() {};
-            var callback = function(err) {};
+            var loginDataTests = [
+                {},
+                { email: 'email' },
+                { password: 'password' },
+                { email: '', password: 'password' },
+                { email: 'email', password: '' }
+            ];
 
-            expect(function() {
-                scrap.start(arg1, arg2, login, callback)
-            }).to.throw(errorMsg);
+            var scrapModules = sinon.spy();
+            var callback = function() {};
+
+            loginDataTests.forEach(function(loginData){
+                expect(function() {
+                    scrap.start(loginData, scrapModules, callback);
+                }).to.throw(errorMsg);
+            });
         });
 
-        it('should require and execute the login function', function(done) {
+        it('should execute the scrapModules once', function(done) {
 
-            var email = 'email';
-            var password = 'password';
-            var login = sinon.spy();
+            var loginData = {
+                email: 'email',
+                password: 'password'
+            };
 
-            scrap.start(email, password, login, function(err){
+            var scrapModules = sinon.spy();
+
+            scrap.start(loginData, scrapModules, function(err){
                 if (err) throw err;
 
-                expect(login.calledOnce).equal(true);
+                expect(scrapModules.calledOnce).equal(true);
                 done();
             })
         });
