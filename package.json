@@ -1,0 +1,25 @@
+{
+  "name": "estomatoweb-scraper",
+  "version": "1.0.0",
+  "description": "A web scraper for www.estomatoweb.com.br to automate the retrieval of patient data.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zanon-io/estomatoweb-scraper.git"
+  },
+  "author": "Zanon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zanon-io/estomatoweb-scraper/issues"
+  },
+  "homepage": "https://github.com/zanon-io/estomatoweb-scraper",
+  "dependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2",
+    "sinon": "^1.16.1"
+  }
+}

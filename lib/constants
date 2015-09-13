@@ -1,0 +1,8 @@
+function define(name, value) {
+    Object.defineProperty(exports, name, {
+        value:      value,
+        enumerable: true
+    });
+}
+
+define('MSGS_INVALID_ARGS', 'Error: you must provide two valid command line arguments. \nUsage: node app.js email password');

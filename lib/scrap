@@ -1,0 +1,14 @@
+var constants = require('../lib/constants');
+
+function start(email, password, login, callback) {
+
+    if (email && password) { // true if both variables are not empty
+        login();
+        callback();
+    }
+    else {
+        throw constants.MSGS_INVALID_ARGS;
+    }
+}
+
+exports.start = start;
