@@ -1,14 +1,28 @@
+var async = require('async');
 var constants = require('../lib/constants');
 
-function start(loginData, scrapModules, callback) {
+exports.start = function(loginData, scrapModules, mainCallback) {
 
     if(loginData.email && loginData.password) { // true if both variables are not empty
-        scrapModules();
-        callback();
+
+        async.waterfall([
+            function(callback){
+                scrapModules.login.connect(callback);
+            },
+            function(callback){
+                scrapModules.pageNavigator.nav(callback);
+            },
+            function(callback){
+                scrapModules.targetData.extract(callback);
+            },
+            function(callback){
+                scrapModules.writer.write(callback);
+            }
+        ], function (err) {
+            mainCallback(err);
+        });
     }
     else {
         throw constants.MSGS_INVALID_LOGINDATA;
     }
-}
-
-exports.start = start;
+};

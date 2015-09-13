@@ -29,21 +29,42 @@ describe('scrap', function() {
             });
         });
 
-        it('should execute the scrapModules once', function(done) {
+        it('should execute each scrap module once', function(done) {
 
             var loginData = {
                 email: 'email',
                 password: 'password'
             };
 
-            var scrapModules = sinon.spy();
+            var login = { connect: function(callback) { callback(null); } };
+            var pageNavigator = { nav: function(callback) { callback(null); } };
+            var targetData = { extract: function(callback) { callback(null); } };
+            var writer = { write: function(callback) { callback(null); } };
+
+            var scrapModules = {
+                login: login,
+                pageNavigator: pageNavigator,
+                targetData: targetData,
+                writer: writer
+            };
+
+            sinon.spy(login, 'connect');
+            sinon.spy(pageNavigator, 'nav');
+            sinon.spy(targetData, 'extract');
+            sinon.spy(writer, 'write');
 
             scrap.start(loginData, scrapModules, function(err){
                 if (err) throw err;
 
-                expect(scrapModules.calledOnce).equal(true);
+                var calledEveryoneOnce =
+                    login.connect.calledOnce &&
+                    pageNavigator.nav.calledOnce &&
+                    targetData.extract.calledOnce &&
+                    writer.write.calledOnce;
+
+                expect(calledEveryoneOnce).equal(true);
                 done();
-            })
+            });
         });
     });
 });
