@@ -2,10 +2,20 @@
   "name": "estomatoweb-scraper",
   "version": "1.0.0",
   "description": "A web scraper for www.estomatoweb.com.br to automate the retrieval of patient data.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "test": "mocha"
+  },
+  "window": {
+    "toolbar": false,
+    "icon": "/images/logo.png",
+    "fullscreen": false,
+    "resizable": false,
+    "width": 800,
+    "height": 600,
+    "min_width": 400,
+    "min_height": 300
   },
   "repository": {
     "type": "git",
@@ -25,7 +35,9 @@
   },
   "dependencies": {
     "async": "^1.4.2",
+    "chai-datetime": "^1.4.0",
     "cheerio": "^0.19.0",
+    "iconv-lite": "^0.4.12",
     "request": "^2.61.0"
   }
 }
