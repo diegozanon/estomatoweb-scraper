@@ -29,3 +29,6 @@ node_modules
 # JetBrains
 .idea
 *.csv
+
+# Scrap Output
+tmp

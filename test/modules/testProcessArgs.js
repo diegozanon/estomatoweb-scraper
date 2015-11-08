@@ -10,10 +10,10 @@ describe('processArgs', function() {
         it('should check if the number of arguments is correct', function() {
 
             var tests = [
-                { args : ['node', 'app.js'], valid : false},
-                { args : ['node', 'app.js', 'arg'], valid : false },
-                { args : ['node', 'app.js', 'arg', 'arg'], valid : true },
-                { args : ['node', 'app.js', 'arg', 'arg', 'arg'], valid : false }
+                { args : ['node', 'app'], valid : false},
+                { args : ['node', 'app', 'arg'], valid : false },
+                { args : ['node', 'app', 'arg', 'arg'], valid : true },
+                { args : ['node', 'app', 'arg', 'arg', 'arg'], valid : false }
             ];
 
             tests.forEach(function(test){
@@ -35,7 +35,7 @@ describe('processArgs', function() {
 
             var arg1 = 'test-email';
             var arg2 = 'test-password';
-            process.argv = ['node', 'app.js', arg1, arg2];
+            process.argv = ['node', 'app', arg1, arg2];
 
             var loginData = processArgs.retrieveLoginData();
 
