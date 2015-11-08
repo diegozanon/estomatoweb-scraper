@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/zanon-io/estomatoweb-scraper.git"
   },
-  "author": "Zanon",
+  "author": "Diego Zanon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zanon-io/estomatoweb-scraper/issues"
