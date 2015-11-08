@@ -32,12 +32,12 @@ describe('utils', function() {
 
             // Currently, the website uses SITE_PATIENTS_PERPAGE = 15
             var tests = [
-                { value:  0, expected: 0},
-                { value:  1, expected: 1},
-                { value: 14, expected: 1},
-                { value: 15, expected: 1},
-                { value: 16, expected: 2},
-                { value: 47, expected: 4}
+                { value:  0, expected: 0 },
+                { value:  1, expected: 1 },
+                { value: 14, expected: 1 },
+                { value: 15, expected: 1 },
+                { value: 16, expected: 2 },
+                { value: 47, expected: 4 }
             ];
 
             tests.forEach(function(test){
@@ -66,20 +66,38 @@ describe('utils', function() {
         });
     });
 
-    describe('#getAge()', function() {
+    describe('#getYearOfDiagnosis()', function() {
+
+        it('should return the correct year', function() {
+
+            var tests = [
+                { reg: '15/94528', expected: new Date('2015-01-01') },
+                { reg: '11/82345', expected: new Date('2011-01-01') },
+                { reg: '98/44528', expected: new Date('1998-01-01') },
+                { reg: '00/72452', expected: new Date('2000-01-01') }
+            ];
+
+            tests.forEach(function(test){
+                var year = utils.getYearOfDiagnosis(test.reg);
+                expect(year).to.equalDate(test.expected);
+            });
+        });
+    });
+
+    describe('#getDateDiff()', function() {
 
         it('should return the difference in years', function() {
 
             var tests = [
-                { date1: new Date('1954-12-1'), date2: new Date('1982-3-13'), expected: 27},
-                { date1: new Date('1954-3-1'), date2: new Date('1982-3-13'), expected: 28},
-                { date1: new Date('1954-3-12'), date2: new Date('1982-3-13'), expected: 28},
-                { date1: new Date('1954-3-13'), date2: new Date('1982-3-13'), expected: 28},
-                { date1: new Date('1954-3-14'), date2: new Date('1982-3-13'), expected: 27}
+                { date1: new Date('1954-12-1'), date2: new Date('1982-3-13'), expected: 27 },
+                { date1: new Date('1954-3-1'), date2: new Date('1982-3-13'), expected: 28 },
+                { date1: new Date('1954-3-12'), date2: new Date('1982-3-13'), expected: 28 },
+                { date1: new Date('1954-3-13'), date2: new Date('1982-3-13'), expected: 28 },
+                { date1: new Date('1954-3-14'), date2: new Date('1982-3-13'), expected: 27 }
             ];
 
             tests.forEach(function(test){
-                var diff = utils.getAge(test.date1, test.date2);
+                var diff = utils.getDateDiff(test.date1, test.date2);
                 expect(diff).equal(test.expected);
             });
         });
