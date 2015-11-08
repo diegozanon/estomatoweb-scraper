@@ -1,29 +1,22 @@
 var constants = require("./lib/constants");
+var processArgs = require("./lib/processArgs");
 var scrap = require("./lib/scrap");
 var login = require("./lib/login");
 var pageNavigator = require("./lib/pageNavigator");
 var patientData = require("./lib/patientData");
 var fileWriter = require("./lib/fileWriter");
 
-var scrapModules = {
-    login: login,
-    pageNavigator: pageNavigator,
-    targetData: patientData,
-    writer: fileWriter
-};
-
 function main() {
 
-    var nbOfArgs = process.argv.length;
+    processArgs.validate(); // throws error if invalid
 
-    if(nbOfArgs != 4) { // Usage: node app.js email password
+    var loginData = processArgs.retrieveLoginData();
 
-        throw constants.MSG_ERROR_ARGS;
-    }
-
-    var loginData = {
-        email: process.argv[2],
-        password: process.argv[3]
+    var scrapModules = {
+        login: login,
+        pageNavigator: pageNavigator,
+        targetData: patientData,
+        writer: fileWriter
     };
 
     scrap.start(loginData, scrapModules, function(err) {
