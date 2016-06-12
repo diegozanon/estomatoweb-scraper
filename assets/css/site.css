@@ -1,10 +1,19 @@
-html, body, ng-view {
+html, body {
   height: 100%;
 }
 
 body {
   font-family: Sans-serif;
   background: #2c3e50;
+}
+
+fieldset {
+  height: 300px;
+}
+
+.header {
+  color: white;
+  text-align: center;
 }
 
 .container-fluid{
@@ -29,24 +38,24 @@ fieldset {
   border: none;
 }
 
-.login-form {
+.scrap-form {
   background: #ecf0f1;
   width: 500px;
   border-radius: 5px;
-  padding: 25px;
+  padding: 35px;
 }
 
-.login-form h2 {
+.scrap-form h2 {
   margin-top: 0px;
   margin-bottom: 20px;
 }
 
-.login-form label {
+.scrap-form label {
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
-.login-form input[type="email"], .login-form input[type="password"] {
+.scrap-form input[type="text"], .scrap-form input[type="password"] {
   padding: 10px 15px;
   margin: 10px 0;
   width: 100%;
@@ -60,12 +69,12 @@ fieldset {
   transition: 0.3s linear;
 }
 
-.login-form input[type="email"]:focus, .login-form input[type="password"]:focus, .login-form button:focus {
+.scrap-form input[type="text"]:focus, .scrap-form input[type="password"]:focus, .scrap-form button:focus {
   outline: none;
   box-shadow: 0 0 1px 1px #1abc9c;
 }
 
-.login-form button {
+.scrap-form button {
   background: #1abc9c;
   padding: 10px;
   margin-top: 20px;
@@ -77,10 +86,55 @@ fieldset {
   border-radius: 5px;
 }
 
-.login-form button:hover {
+.scrap-form button:hover {
   background: #1bc6a4;
 }
 
-.padded {
-  padding: 10px;
+.err-msg {
+  color: #ef3434; /* red */
+}
+
+.btn span.glyphicon {
+	opacity: 0;
+}
+
+.btn.active span.glyphicon {
+	opacity: 1;
+}
+
+.scrap-form .btn-checkbox {
+  margin: 0px;
+}
+
+.btn-checkbox {
+  background-color: #1abc9c;
+  color: white;
+  padding: 1px 4px;
+  height: 22px;
+}
+
+.btn-checkbox:hover {
+  color: white;
+}
+
+.btn-checkbox .glyphicon {
+  font-size: 12px;
+  top: 0px;
+}
+
+.scrap-form .row {
+  margin-bottom: 10px;
+}
+
+.scrap-form .btn-download {
+  width: 120px;
+}
+
+.progress-bar {
+  background-color: #1abc9c;
+}
+
+.finished-downloading-msg {
+  margin-top: 100px;
+  text-align: center;
 }

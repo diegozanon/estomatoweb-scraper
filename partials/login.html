@@ -1,14 +1,11 @@
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="login-form center">
-       <fieldset class="padded">
-         <h2>Digite os seus dados</h2>
-         <label name="email">E-mail</label>
-         <input type="email" placeholder="exemplo@email.com" required autofocus>
-         <label name="password">Senha</label>
-         <input type="password" required>
-         <button type="submit">Prosseguir</button>
-       </fieldset>
-    </div>
-  </div>
+<div class="scrap-form center">
+  <fieldset>
+    <h2>Digite os seus dados</h2>
+    <label>E-mail</label>
+    <input type="text" ng-model="login.email" placeholder="exemplo@email.com" autofocus>
+    <label>Senha</label>
+    <input type="password" ng-model="login.password">
+    <button ng-click="continue()">Prosseguir</button>
+    <label class="err-msg" ng-if="errMsg">favor preencher os dois campos</label>
+  </fieldset>
 </div>

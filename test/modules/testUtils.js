@@ -55,7 +55,7 @@ describe('utils', function() {
                 { value: '31/ 5 /1985', expected: new Date('1985-5-31') },
                 { value: '31/ 12 /1985', expected: new Date('1985-12-31') },
                 { value: '5/ 5 /1985', expected: new Date('1985-5-5') },
-                { value: '5/ 12 /1985', expected: new Date('1985-12-5') },                
+                { value: '5/ 12 /1985', expected: new Date('1985-12-5') },
                 { value: '31/ 5 /1900', expected: new Date('1900-5-31') }
             ];
 
@@ -103,7 +103,7 @@ describe('utils', function() {
         });
     });
 
-    describe('#getPercentage()', function() {
+    describe('#calculatePercentage()', function() {
 
         it('should return the correct percentage for the given input', function() {
 
@@ -117,7 +117,7 @@ describe('utils', function() {
             ];
 
             tests.forEach(function(test){
-                var percentage = utils.getPercentage(test.current, test.total);
+                var percentage = utils.calculatePercentage(test.current, test.total);
                 expect(percentage).equal(test.expected);
             });
         });

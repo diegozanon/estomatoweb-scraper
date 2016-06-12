@@ -1,0 +1,10 @@
+<div class="scrap-form center">
+  <fieldset>
+    <h2>Download dos dados</h2>
+    <h4>Login: <span class="err-msg" ng-show="loginFailed">falhou</span><span ng-show="loginSuccess">ok</span></h4>
+    <h4>Quantidade de Pacientes: {{nbOfPatients}}</h4>
+    <h4>Progresso:</h4>
+    <uib-progressbar class="progress-striped active" value="downloadValue">{{downloadPercentage}}</uib-progressbar>
+    <h3 ng-if="showFinishedMsg" class="finished-downloading-msg">Concluído!</h3>
+  </fieldset>
+</div>
