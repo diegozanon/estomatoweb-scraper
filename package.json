@@ -2,14 +2,14 @@
   "name": "estomatoweb-scraper",
   "version": "1.0.0",
   "description": "A web scraper for www.estomatoweb.com.br to automate the retrieval of patient data.",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "node app.js",
     "test": "mocha"
   },
   "window": {
-    "toolbar": false,
-    "icon": "/images/logo.png",
+    "toolbar": true,
+    "icon": "images/logo.png",
     "fullscreen": false,
     "resizable": false,
     "width": 800,

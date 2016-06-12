@@ -1,0 +1,86 @@
+html, body, ng-view {
+  height: 100%;
+}
+
+body {
+  font-family: Sans-serif;
+  background: #2c3e50;
+}
+
+.container-fluid{
+  height: 100%;
+  width: 100%;
+  display: table;
+  padding: 0;
+}
+
+.row-fluid {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.center {
+  float:none;
+  margin:0 auto;
+}
+
+fieldset {
+  border: none;
+}
+
+.login-form {
+  background: #ecf0f1;
+  width: 500px;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.login-form h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.login-form input[type="email"], .login-form input[type="password"] {
+  padding: 10px 15px;
+  margin: 10px 0;
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.login-form input[type="email"]:focus, .login-form input[type="password"]:focus, .login-form button:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px #1abc9c;
+}
+
+.login-form button {
+  background: #1abc9c;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.login-form button:hover {
+  background: #1bc6a4;
+}
+
+.padded {
+  padding: 10px;
+}
