@@ -126,6 +126,14 @@ fieldset {
   margin-bottom: 10px;
 }
 
+.scrap-form .col-sm-4 {
+  padding: 0px;
+}
+
+.scrap-form .col-sm-4 > span {
+  font-size: 12px;
+}
+
 .scrap-form .btn-download {
   width: 120px;
 }
