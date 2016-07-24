@@ -1,18 +1,18 @@
 ### English
 
-This program was created to scrap patient data from [EstomatoWeb](http://www.estomatoweb.com.br/).
+This program was created to scrap patient data from [EstomatoWeb](http://www.estomatoweb.com.br/).  
 It requires a valid user/password and statistical works based on data extracted from this site requires approval of your local ethics committee.
 
 ### Português
 
-Este programa foi criado para extrair dados de pacientes do [EstomatoWeb](http://www.estomatoweb.com.br/).
+Este programa foi criado para extrair dados de pacientes do [EstomatoWeb](http://www.estomatoweb.com.br/).  
 Ele requer um usuário/senha válidos e trabalhos estatísticos baseados nos dados extraídos deste site requerem aprovação do seu comitê de ética local.
 
-### Download
+### Installer
 
-//
+// TODO
 
-### Images / Imagens
+### Images
 
 ![login](images/1.png?raw=true)  
 
