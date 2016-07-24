@@ -18,6 +18,10 @@ var scrapModules = {
 };
 
 scrap.start(loginData, scrapModules, function(err) {
-    if(err) throw err;
+    if(err) {
+      console.error(err.stack || err);
+      return;
+    }
+
     console.log("Finished with success.");
 });

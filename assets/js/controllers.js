@@ -48,9 +48,14 @@ ctrls.controller('DownloadController', function(DataService, $scope) {
   };
 
   scrap.start(loginData, scrapModules, function(err) {
-      if(err) throw err;
+      if(err) {
+        console.error(err.stack || err);
+        return;
+      }
+
       $scope.showFinishedMsg = true;
       $scope.$apply();
+      console.log("Finished with success.");
   });
 
   $scope.downloadValue = 0;
