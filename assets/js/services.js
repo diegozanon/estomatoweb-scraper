@@ -4,6 +4,7 @@ services.factory('DataService', function() {
 
     var email = '';
     var password = '';
+    var options = {};
 
     return {
 
@@ -21,6 +22,14 @@ services.factory('DataService', function() {
 
       setPassword: function(val) {
         password = val;
+      },
+
+      getOptions: function() {
+        return options;
+      },
+
+      setOptions: function(val) {
+        options = val;
       }
     };
   });
