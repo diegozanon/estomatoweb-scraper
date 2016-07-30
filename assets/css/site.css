@@ -143,6 +143,14 @@ fieldset {
 }
 
 .finished-downloading-msg {
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
+}
+
+.open-folder {
+  cursor: pointer;
+}
+
+.open-folder:hover {
+  text-decoration: none;
 }

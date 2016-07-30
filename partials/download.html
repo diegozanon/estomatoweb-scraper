@@ -5,6 +5,9 @@
     <h4>Quantidade de Pacientes: {{nbOfPatients}}</h4>
     <h4>Progresso:</h4>
     <uib-progressbar class="progress-striped active" value="downloadValue">{{downloadPercentage}}</uib-progressbar>
-    <h3 ng-if="showFinishedMsg" class="finished-downloading-msg">Concluído!</h3>
+    <div ng-if="showFinishedMsg" class="finished-downloading-msg">
+      <h3>Concluído!</h3>
+      <h4><a class="open-folder" ng-click="openFolder()">clique aqui</a></h4>
+    </div>
   </fieldset>
 </div>

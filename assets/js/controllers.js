@@ -90,6 +90,7 @@ ctrls.controller('DownloadController', function(DataService, $scope) {
   var patientData = require("./lib/patientData");
   var fileWriter = require("./lib/fileWriter");
   var utils = require("./lib/utils");
+  var constants = require("./lib/constants");
 
   var loginData = {
       email: DataService.getEmail(),
@@ -139,4 +140,9 @@ ctrls.controller('DownloadController', function(DataService, $scope) {
 
     $scope.$apply();
   }, 250);
+
+  $scope.openFolder = function() {
+    var fullpath = utils.getFullPath(constants.FILE_NAME);
+    nw.Shell.showItemInFolder(fullpath);
+  };
 });
