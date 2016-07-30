@@ -31,4 +31,4 @@ node_modules
 *.csv
 
 # Scrap Output
-tmp
+downloaded
