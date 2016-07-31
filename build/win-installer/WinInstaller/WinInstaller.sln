@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WinInstaller", "WinInstaller\WinInstaller.vdproj", "{248B96A0-0EFC-44C8-9106-853F786CA478}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{248B96A0-0EFC-44C8-9106-853F786CA478}.Debug|Default.ActiveCfg = Debug
+		{248B96A0-0EFC-44C8-9106-853F786CA478}.Debug|Default.Build.0 = Debug
+		{248B96A0-0EFC-44C8-9106-853F786CA478}.Release|Default.ActiveCfg = Release
+		{248B96A0-0EFC-44C8-9106-853F786CA478}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
