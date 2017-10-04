@@ -8,14 +8,14 @@ Este programa foi criado para extrair dados de pacientes do [EstomatoWeb](http:/
 
 ### Authors
 
-Diego Zanon
-Caroline Franco Zanon
-Michelle Agostini
-Ellen Brilhante Cortezzi
+Diego Zanon  
+Caroline Franco Zanon  
+Michelle Agostini  
+Ellen Brilhante Cortezzi  
 
-Departamento de Diagnóstico Oral
-Clínica de Estomatologia
-Universidade Federal do Rio de Janeiro
+Departamento de Diagnóstico Oral  
+Clínica de Estomatologia  
+Universidade Federal do Rio de Janeiro  
 
 ### Installer
 
