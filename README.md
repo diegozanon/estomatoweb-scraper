@@ -13,8 +13,9 @@ Caroline Franco Zanon
 Michelle Agostini  
 Ellen Brilhante Cortezzi  
 
-Departamento de Diagnóstico Oral  
-Clínica de Estomatologia  
+Departamento de Patologia e Diagnóstico Oral  
+Estomatologia
+Faculdade de Odontologia
 Universidade Federal do Rio de Janeiro  
 
 ### Installer
