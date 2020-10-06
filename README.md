@@ -18,9 +18,9 @@ Estomatologia
 Faculdade de Odontologia  
 Universidade Federal do Rio de Janeiro  
 
-### Installer
+### Installers
 
-[Windows](https://s3.amazonaws.com/estomatoweb-installers/estomatoweb-windows-v1.0.0.msi) | [macOS](https://s3.amazonaws.com/estomatoweb-installers/estomatoweb-mac-v1.0.0.zip) | [Linux](https://s3.amazonaws.com/estomatoweb-installers/estomatoweb-linux-v1.0.0.zip)
+[Link](https://github.com/diegozanon/estomatoweb-scraper/releases/tag/v1.0.0)
 
 ### Images
 
